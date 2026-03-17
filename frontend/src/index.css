@@ -596,3 +596,112 @@ body {
 .breakdown-score.good { color: var(--green); }
 .breakdown-score.bad  { color: var(--red); }
 .breakdown-score.ok   { color: var(--gold); }
+
+/* ── CREDIT BANNER ── */
+.credit-banner {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  margin-bottom: 4px;
+}
+
+/* ── RESPONSIVE ── */
+
+/* Tablet: stack home screen */
+@media (max-width: 768px) {
+  body { overflow: auto; }
+
+  /* Home */
+  .home-screen {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 100vh;
+  }
+  .home-left {
+    padding: 36px 28px;
+    min-height: auto;
+  }
+  .home-logo { font-size: 52px; }
+  .home-logo-area { margin: 28px 0; }
+  .home-right { padding: 28px; gap: 10px; }
+
+  /* Exam layout: stack passage above questions */
+  .exam-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+    overflow: visible;
+  }
+  .passage-panel {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--gray-2);
+    padding: 24px 20px;
+    overflow: visible;
+    max-height: 45vh;
+    overflow-y: auto;
+  }
+  .question-panel {
+    width: 100%;
+    padding: 24px 20px;
+    overflow: visible;
+  }
+
+  /* Give the exam container scroll */
+  div[style*="height: 100vh"] {
+    height: auto !important;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  /* Bottom bar stays fixed but shrinks */
+  .bottom-bar { padding: 0 16px; }
+
+  /* Navigator scrolls horizontally — already works, just tighten padding */
+  .navigator { padding: 0 16px; }
+
+  /* Score breakdown single column */
+  .score-breakdown { grid-template-columns: 1fr; }
+  .score-card { padding: 32px 24px; }
+  .score-scaled { font-size: 64px; }
+
+  /* Topbar tighten */
+  .topbar { padding: 0 16px; }
+  .topbar-section { display: none; }
+}
+
+/* Phone */
+@media (max-width: 480px) {
+  .home-logo { font-size: 44px; }
+  .home-stats { gap: 20px; }
+  .home-stat-num { font-size: 22px; }
+
+  .passage-panel { padding: 20px 16px; font-size: 15px; }
+  .passage-text { font-size: 15px; line-height: 1.9; }
+  .question-panel { padding: 20px 16px; }
+  .question-text { font-size: 15px; }
+  .choice-btn { font-size: 14px; padding: 12px 14px; }
+
+  .mode-card { padding: 16px 18px; }
+  .mode-icon { width: 38px; height: 38px; font-size: 17px; }
+  .mode-title { font-size: 14px; }
+
+  .btn { padding: 8px 16px; font-size: 12px; }
+  .bottom-bar { padding: 0 12px; }
+}
+
+/* Large screens / TV: cap width, center content */
+@media (min-width: 1600px) {
+  .home-left { padding: 64px 80px; }
+  .home-right { padding: 64px 80px; }
+  .home-logo { font-size: 88px; }
+  .passage-panel { padding: 48px 64px; }
+  .question-panel { padding: 48px 64px; }
+  .passage-text { font-size: 18px; }
+  .question-text { font-size: 18px; }
+  .choice-btn { font-size: 17px; padding: 16px 22px; }
+}

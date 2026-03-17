@@ -198,6 +198,7 @@ export default function App() {
         </div>
 
         <div className="home-right">
+          <div className="credit-banner">💡 Made by Rahul Vinoth | Wayzata Inventors Club 💡</div>
           <div className="home-right-heading">Choose your mode</div>
 
           <div className="mode-card" onClick={() => startExam('practice')}>
