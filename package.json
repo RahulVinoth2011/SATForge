@@ -1,4 +1,8 @@
 {
   "name": "satforge",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd frontend && npm install && npx vite build",
+    "cli": "cd cli-version && npm start"
+  }
 }
