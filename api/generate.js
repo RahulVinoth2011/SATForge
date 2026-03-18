@@ -2,7 +2,7 @@ import https from 'https';
 
 const MODEL = 'llama-3.3-70b-versatile';
 
-function callGroq(apiKey, systemPrompt, userPrompt, maxTokens = 1200) {
+function callGroq(apiKey, systemPrompt, userPrompt, maxTokens = 800) {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify({
       model: MODEL,
